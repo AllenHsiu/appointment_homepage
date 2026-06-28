@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>為什麼選我們｜LINE 美業預約系統 競品比較</title>
+<style>
+  :root{
+    --bg:#f6f5f3; --card:#ffffff; --ink:#1f2430; --muted:#6b7280;
+    --line:#e7e4df;
+    --brand:#0f9d8c; --brand-deep:#0b7d70; --brand-soft:#e7f7f4;
+    --rival-head:#3a3f4b;
+    --yes:#0f9d8c; --no:#b91c1c; --partial:#b45309; --gray:#9ca3af;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;padding:32px 16px;}
+  .wrap{max-width:1320px;margin:0 auto;}
+  header.page{text-align:center;margin-bottom:26px;}
+  .eyebrow{color:var(--brand-deep);font-weight:700;letter-spacing:2px;font-size:.85rem;}
+  h1{font-size:2rem;margin:6px 0 10px;}
+  h1 b{color:var(--brand-deep);}
+  .sub{color:var(--muted);font-size:1rem;margin:0 auto;max-width:760px;}
+
+  /* highlight cards row */
+  .usp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 30px;}
+  .usp .c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;
+    box-shadow:0 4px 16px rgba(31,36,48,.05);}
+  .usp .c .big{font-size:1.5rem;font-weight:800;color:var(--brand-deep);}
+  .usp .c .lbl{font-size:.85rem;color:var(--muted);margin-top:4px;}
+  @media(max-width:780px){.usp{grid-template-columns:repeat(2,1fr);}}
+
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin:0 0 12px;font-size:.85rem;color:var(--muted);justify-content:center;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block;}
+  .dot.y{background:var(--yes);}.dot.p{background:var(--partial);}.dot.n{background:var(--no);}
+
+  .table-scroll{overflow-x:auto;border-radius:16px;box-shadow:0 8px 32px rgba(31,36,48,.10);background:var(--card);}
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:1120px;font-size:.9rem;}
+  caption{caption-side:bottom;text-align:left;padding:14px 18px;color:var(--muted);font-size:.78rem;}
+  th,td{padding:14px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+
+  thead th{background:var(--rival-head);color:#fff;font-weight:600;font-size:.9rem;position:sticky;top:0;z-index:2;}
+  thead th small{display:block;font-weight:400;opacity:.72;font-size:.7rem;margin-top:3px;}
+  thead th:first-child{border-top-left-radius:16px;}
+  thead th:last-child{border-top-right-radius:16px;}
+
+  /* your column highlight */
+  .me{background:var(--brand)!important;color:#fff!important;position:relative;}
+  thead th.me{box-shadow:inset 0 0 0 2px var(--brand-deep);}
+  .me .badge{display:inline-block;background:#fff;color:var(--brand-deep);font-size:.68rem;font-weight:800;
+    border-radius:999px;padding:2px 9px;margin-bottom:5px;letter-spacing:1px;}
+  td.me{background:var(--brand-soft)!important;color:var(--ink);font-weight:600;
+    box-shadow:inset 2px 0 0 var(--brand),inset -2px 0 0 var(--brand);}
+  tbody tr:last-child td.me{box-shadow:inset 2px 0 0 var(--brand),inset -2px 0 0 var(--brand),inset 0 -2px 0 var(--brand);}
+
+  tbody th{background:#faf9f7;color:var(--ink);font-weight:600;white-space:nowrap;position:sticky;left:0;z-index:1;
+    border-right:1px solid var(--line);}
+  tbody tr:hover td:not(.me){background:#fbfaf9;}
+  .y{color:var(--yes);font-weight:700;}.p{color:var(--partial);font-weight:600;}.n{color:var(--no);font-weight:600;}
+  .me .y{color:var(--brand-deep);}
+  .askquote{color:var(--gray);font-style:italic;}
+  .section{background:#eef1f4;}
+  .section th,.section td{padding:8px 15px;font-size:.78rem;font-weight:700;color:#475569;letter-spacing:1px;background:#eef1f4;}
+
+  .note{margin-top:22px;background:var(--brand-soft);border:1px solid #b9e6df;border-radius:12px;padding:16px 18px;
+    font-size:.86rem;color:#0b5b52;}
+  .warn{margin-top:14px;background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:14px 18px;
+    font-size:.82rem;color:#92400e;}
+  .sources{margin-top:18px;font-size:.78rem;color:var(--muted);}
+  .sources a{color:var(--muted);}
+  footer{margin-top:24px;font-size:.78rem;color:var(--muted);text-align:center;}
+  .todo{background:#fef08a;padding:0 5px;border-radius:4px;font-weight:700;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="page">
+    <div class="eyebrow">LINE 美業預約系統</div>
+    <h1>價格透明、<b>完全不綁約</b>，不依人數加價</h1>
+    <p class="sub">市面上多數系統「定價不公開、人數越多越貴、還有一堆隱藏費用」。我們把成本攤在陽光下 —— 一個月費，全店共用。</p>
+  </header>
+
+  <div class="usp">
+    <div class="c"><div class="big">0 元</div><div class="lbl">建置費／設定費</div></div>
+    <div class="c"><div class="big">免綁約</div><div class="lbl">月繳，隨時可停</div></div>
+    <div class="c"><div class="big">固定價</div><div class="lbl">不限人數同一價</div></div>
+    <div class="c"><div class="big">公開</div><div class="lbl">官網標價，免報價</div></div>
+  </div>
+
+  <div class="legend">
+    <span><i class="dot y"></i> 對你有利／免費</span>
+    <span><i class="dot p"></i> 部分／需加購</span>
+    <span><i class="dot n"></i> 較不利／需付費</span>
+    <span class="askquote">需洽詢 = 官方未公開</span>
+  </div>
+
+  <div class="table-scroll">
+  <table>
+    <thead>
+      <tr>
+        <th>比較重點</th>
+        <th class="me"><span class="badge">你的系統</span><br>美約<small>LINE 美業預約</small></th>
+        <th>夯客 HOTCAKE<small>訂閱制</small></th>
+        <th>客立樂 QLiEER<small>曜比科技</small></th>
+        <th>神美 SayDou<small>沙龍雲端</small></th>
+        <th>美業歐巴 BeautinQ<small>威許移動</small></th>
+        <th>樂創約<small>工作室導向</small></th>
+        <th>17FIT<small>美業＋健身</small></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="section"><th>💰 綁約與費用（核心差異）</th><td class="section" colspan="7"></td></tr>
+
+      <tr>
+        <th>綁約方式</th>
+        <td class="me y">完全不綁約 · 月繳</td>
+        <td class="y">月繳不綁約</td>
+        <td class="askquote">需洽詢（多為年約）</td>
+        <td class="askquote">需洽詢（多為年約）</td>
+        <td class="askquote">需洽詢（多為年約）</td>
+        <td class="p">免費版＋方案</td>
+        <td class="askquote">需洽詢</td>
+      </tr>
+
+      <tr>
+        <th>定價透明度</th>
+        <td class="me y">官網公開固定價</td>
+        <td class="p">官網部分公開</td>
+        <td class="n">不公開 · 需報價</td>
+        <td class="p">體驗版免費，付費需洽詢</td>
+        <td class="n">不公開 · 需報價</td>
+        <td class="n">不公開 · 需報價</td>
+        <td class="n">不公開 · 需報價</td>
+      </tr>
+
+      <tr>
+        <th>是否依「人數／員工數」加價</th>
+        <td class="me y">否 · 不限人數同一價</td>
+        <td class="askquote">依方案／需洽詢</td>
+        <td class="p">多人方案另計</td>
+        <td class="p">多人／加值另計</td>
+        <td class="p">依方案／需洽詢</td>
+        <td class="p">偏一對一</td>
+        <td class="askquote">依方案／需洽詢</td>
+      </tr>
+
+      <tr>
+        <th>月費</th>
+        <td class="me y"><span class="todo">$XXX／月</span>（公開透明）</td>
+        <td class="askquote">月費制 · 需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">加值年費 · 需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+      </tr>
+
+      <tr>
+        <th>年繳優惠</th>
+        <td class="me y">有 · 年繳更省</td>
+        <td class="p">月繳為主</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">加值多為年費</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+      </tr>
+
+      <tr>
+        <th>建置費／設定費</th>
+        <td class="me y">0 元</td>
+        <td class="y">免建置費</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+      </tr>
+
+      <tr>
+        <th>綁約押金／保證金</th>
+        <td class="me y">0 元</td>
+        <td class="y">免押金</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+        <td class="askquote">需洽詢</td>
+      </tr>
+
+      <tr>
+        <th>加值功能另外收費</th>
+        <td class="me y"><span class="todo">一價全功能</span></td>
+        <td class="p">部分進階另計</td>
+        <td class="p">部分功能加購</td>
+        <td class="n">IG預約/出單機等加值收費</td>
+        <td class="p">加值方案</td>
+        <td class="p">金流／進階方案</td>
+        <td class="p">加值另計</td>
+      </tr>
+
+      <tr>
+        <th>免費試用</th>
+        <td class="me y"><span class="todo">提供（天數待定）</span></td>
+        <td class="y">有免費方案</td>
+        <td class="askquote">需洽詢</td>
+        <td class="y">票券體驗版免費</td>
+        <td class="askquote">需洽詢</td>
+        <td class="y">有免費版</td>
+        <td class="askquote">需洽詢</td>
+      </tr>
+
+      <tr class="section"><th>⚙️ 核心功能（我們同樣具備）</th><td class="section" colspan="7"></td></tr>
+
+      <tr>
+        <th>LINE 官方帳號預約</th>
+        <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td>
+      </tr>
+      <tr>
+        <th>24hr 自動接單</th>
+        <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td>
+      </tr>
+      <tr>
+        <th>自動提醒（防爽約）</th>
+        <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td>
+      </tr>
+      <tr>
+        <th>線上訂金／金流</th>
+        <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="p">● LINE Pay 加值</td><td class="y">●</td><td class="y">●</td><td class="y">●</td>
+      </tr>
+      <tr>
+        <th>會員管理／標籤</th>
+        <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td>
+      </tr>
+      <tr>
+        <th>多人排班</th>
+        <td class="me y">● 不限人數</td><td class="p">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="n">○ 偏一對一</td><td class="y">●</td>
+      </tr>
+      <tr>
+        <th>營運報表</th>
+        <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="p">●</td><td class="y">●</td>
+      </tr>
+    </tbody>
+    <caption>● 具備／有利　● 部分或需加購　○ 無或較不利　｜ 競品「需洽詢」欄位代表官方未公開，需向業者索取報價。本表依各官網 2026/06 公開資訊整理，實際以官方為準。</caption>
+  </table>
+  </div>
+
+  <div class="note">
+    <b>你的兩大殺手鐧：</b><br>
+    ① <b>定價公開透明</b> —— 表中 5 家競品都是「需洽詢／不公開」，客戶得留資料、被業務追，你直接官網標價就贏在第一印象。<br>
+    ② <b>不依人數加價</b> —— 競品常見「人越多越貴」，你用固定月費全店共用，<b>店越大、省越多</b>，這是對中大型沙龍最有力的說服點。
+  </div>
+
+  <div class="warn">
+    <span class="todo">黃底處</span>是待你補的資料：①品牌名稱 ②月費金額 ③年繳優惠 ④免費試用天數。把數字給我，我直接填進去並可同步做成首頁 Hero 區。<br>
+    另外：「人數越多越貴」「競品年約」屬市場普遍觀察，正式對外行銷前建議逐家查證最新報價，避免不實比較的法律風險（我已把無法證實的欄位標為「需洽詢」而非編造數字）。
+  </div>
+
+  <div class="sources">
+    <b>資料來源：</b>
+    <a href="https://hotcake.app/" target="_blank" rel="noopener">夯客</a>、
+    <a href="https://www.qlieer.com/" target="_blank" rel="noopener">客立樂</a>、
+    <a href="https://www.saydou.com/fee/" target="_blank" rel="noopener">神美 SayDou 價格</a>、
+    <a href="https://www.beautinq.com/plan-content" target="_blank" rel="noopener">美業歐巴</a>、
+    <a href="https://xn--qery78ceon.tw/" target="_blank" rel="noopener">樂創約</a>、
+    <a href="https://17fit.com/b/beauty" target="_blank" rel="noopener">17FIT</a>。
+  </div>
+
+  <footer>競品定位比較表 · 草稿 v1 · 黃底欄位待補實際數字</footer>
+</div>
+</body>
+</html>
