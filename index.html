@@ -144,6 +144,13 @@
   .plan li{padding:6px 0 6px 26px;position:relative;}
   .plan li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:900;}
   @media(max-width:880px){.price-wrap{grid-template-columns:1fr;}.plan.feature{transform:none;}}
+  .no-hidden{margin:30px auto 0;max-width:820px;background:var(--brand-soft);border:2px solid var(--brand);
+    border-radius:16px;padding:24px;text-align:center;box-shadow:var(--shadow);}
+  .no-hidden .nh-title{font-size:1.25rem;font-weight:900;color:var(--brand-deep);margin-bottom:16px;}
+  .no-hidden .nh-items{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+  .no-hidden .nh-items span{background:#fff;color:var(--brand-ink);border:1px solid #bfe9e1;border-radius:999px;
+    padding:9px 18px;font-size:.95rem;font-weight:800;}
+  .no-hidden .nh-foot{margin:16px 0 0;color:var(--muted);font-size:.84rem;line-height:1.5;}
 
   /* faq */
   .faq{max-width:760px;margin:0 auto;}
@@ -332,7 +339,7 @@
     <div class="sec-head">
       <div class="kicker">PRICING</div>
       <h2>方案簡單、價格公開</h2>
-      <p>不用留資料等業務報價 —— 看得到的就是你付的。3 位內設計師同一價，先免費試用 14 天。</p>
+      <p>不用留資料等業務報價 —— <b>看得到的價格，就是你付的全部</b>。3 位內設計師同一價，先免費試用 14 天。</p>
     </div>
     <div class="price-wrap">
       <div class="plan">
@@ -349,6 +356,19 @@
         <a href="#cta" class="btn btn-primary">最受歡迎</a>
       </div>
     </div>
+
+    <div class="no-hidden">
+      <div class="nh-title">🔍 價格透明，沒有隱藏費用</div>
+      <div class="nh-items">
+        <span>✓ 免建置費</span>
+        <span>✓ 免開通費</span>
+        <span>✓ 免押金</span>
+        <span>✓ 不綁約</span>
+        <span>✓ 簡易客製不加價</span>
+        <span>✓ 無業務追價</span>
+      </div>
+      <p class="nh-foot">官網直接標價，所有費用一次講清楚 —— 你看到的，就是你付的全部。<br><small>（唯一額外項目為 LINE 官方推播訊息費，超量時由 LINE 官方收取，非美約收費。）</small></p>
+    </div>
   </div>
 </section>
 
@@ -361,6 +381,7 @@
       <details><summary>真的不綁約嗎？</summary><p>是的，採月繳制，隨時可停用，不收違約金、不押保證金。</p></details>
       <details><summary>顧客一定要加 LINE 才能預約嗎？</summary><p>不用。除了 LINE 官方帳號，我們也提供專屬預約網頁，把連結貼到 IG、FB 或 Google，顧客免加好友就能直接預約。</p></details>
       <details><summary>有建置費或設定費嗎？</summary><p>沒有。建置費、設定費、押金一律 0 元，開通即用。</p></details>
+      <details><summary>有沒有隱藏費用？</summary><p>沒有。官網標示的月費就是全部 —— 免建置費、免開通費、免押金、不綁約，簡易客製也不加價。唯一額外項目是 LINE 官方帳號的推播訊息費，超量時由 <b>LINE 官方</b>收取，非美約收費。</p></details>
       <details><summary>需要會寫程式或架站嗎？</summary><p>不用。串接你的 LINE 官方帳號就能開始接單，我們提供專人協助上手。</p></details>
       <details><summary>顧客需要下載 App 嗎？</summary><p>不需要。顧客直接在 LINE 上完成預約與付訂金，零門檻。</p></details>
     </div>
