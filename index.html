@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>美約｜LINE 美業預約系統 - 價格透明・完全不綁約</title>
+<title>美約 MeiYue｜LINE 美業預約系統 - 價格透明・完全不綁約</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='15' fill='%230f9d8c'/><path d='M16 27 H48 M22 15 V21 M42 15 V21' stroke='white' stroke-width='4' stroke-linecap='round'/><rect x='16' y='20' width='32' height='30' rx='6' fill='none' stroke='white' stroke-width='4'/><text x='32' y='46' text-anchor='middle' font-size='15' font-weight='800' fill='white' font-family='sans-serif'>美</text></svg>">
 <style>
   :root{
     --bg:#ffffff; --soft:#f4f8f7; --ink:#16201d; --muted:#5f6b67;
@@ -35,8 +36,10 @@
   nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);}
   nav .inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .logo{font-weight:900;font-size:1.25rem;color:var(--brand-deep);letter-spacing:.5px;}
+  .logo{font-weight:900;font-size:1.25rem;color:var(--brand-deep);letter-spacing:.5px;display:inline-flex;align-items:center;gap:8px;}
+  .logo .logo-mark{flex-shrink:0;}
   .logo span{color:var(--ink);}
+  .logo .py{font-size:.72rem;font-weight:700;color:var(--brand);letter-spacing:1.5px;margin:0 2px 0 4px;text-transform:uppercase;}
   .navlinks{display:flex;gap:26px;font-size:.92rem;font-weight:600;color:var(--muted);}
   .navlinks a:hover{color:var(--brand-deep);}
   .nav-cta{padding:9px 18px;font-size:.9rem;}
@@ -99,22 +102,23 @@
   .ldot{width:10px;height:10px;border-radius:50%;display:inline-block;}
   .ldot.y{background:var(--yes);}.ldot.p{background:var(--partial);}.ldot.n{background:var(--no);}
   .table-scroll{overflow-x:auto;border-radius:16px;box-shadow:var(--shadow);background:#fff;}
-  table{border-collapse:separate;border-spacing:0;width:100%;min-width:1120px;font-size:.88rem;}
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:820px;font-size:.88rem;}
   caption{caption-side:bottom;text-align:left;padding:14px 18px;color:var(--muted);font-size:.76rem;}
   th,td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
   thead th{background:#2f3a37;color:#fff;font-weight:600;font-size:.88rem;position:sticky;top:0;z-index:2;}
   thead th small{display:block;font-weight:400;opacity:.7;font-size:.68rem;margin-top:3px;}
   thead th:first-child{border-top-left-radius:16px;}thead th:last-child{border-top-right-radius:16px;}
-  .me{background:var(--brand)!important;color:#fff!important;}
+  .me{background:var(--brand)!important;}
+  thead th.me{background:var(--brand-deep)!important;color:#fff!important;font-weight:800;font-size:1rem;}
   .me .badge{display:inline-block;background:#fff;color:var(--brand-deep);font-size:.65rem;font-weight:800;
     border-radius:999px;padding:2px 9px;margin-bottom:5px;letter-spacing:1px;}
-  td.me{background:var(--brand-soft)!important;color:var(--ink);font-weight:600;
+  td.me{background:var(--brand-soft)!important;color:var(--ink)!important;font-weight:600;
     box-shadow:inset 2px 0 0 var(--brand),inset -2px 0 0 var(--brand);}
   tbody tr:last-child td.me{box-shadow:inset 2px 0 0 var(--brand),inset -2px 0 0 var(--brand),inset 0 -2px 0 var(--brand);}
   tbody th{background:#fafbfa;color:var(--ink);font-weight:600;white-space:nowrap;position:sticky;left:0;z-index:1;border-right:1px solid var(--line);}
   tbody tr:hover td:not(.me){background:#fafbfa;}
   .y{color:var(--yes);font-weight:700;}.p{color:var(--partial);font-weight:600;}.n{color:var(--no);font-weight:600;}
-  .me .y{color:var(--brand-deep);}
+  td.me.y{color:var(--brand-deep)!important;}
   .askquote{color:var(--gray);font-style:italic;}
   .grp th,.grp td{padding:8px 14px;font-size:.76rem;font-weight:800;color:#475569;letter-spacing:1px;background:#eef2f0;}
 
@@ -160,7 +164,14 @@
 
 <nav>
   <div class="wrap inner">
-    <div class="logo">美約<span>·美業預約</span></div>
+    <div class="logo">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="8" y="13" width="48" height="43" rx="10" fill="none" stroke="#0f9d8c" stroke-width="5"/>
+        <path d="M8 25 H56" stroke="#0f9d8c" stroke-width="5"/>
+        <path d="M20 7 V17 M44 7 V17" stroke="#0f9d8c" stroke-width="5" stroke-linecap="round"/>
+        <text x="32" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#0f9d8c" font-family="PingFang TC,Microsoft JhengHei,sans-serif">美</text>
+      </svg>
+      美約<span class="py">MeiYue</span><span>·美業預約</span></div>
     <div class="navlinks">
       <a href="#features">功能</a>
       <a href="#compare">競品比較</a>
@@ -262,52 +273,48 @@
       <thead>
         <tr>
           <th>比較重點</th>
-          <th class="me"><span class="badge">你的系統</span><br>美約</th>
+          <th class="me"><span class="badge">你的系統</span><br>美約 MeiYue</th>
           <th>夯客<small>HOTCAKE</small></th>
           <th>客立樂<small>QLiEER</small></th>
           <th>神美<small>SayDou</small></th>
-          <th>美業歐巴<small>BeautinQ</small></th>
           <th>樂創約</th>
-          <th>17FIT</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="grp"><th>💰 綁約與費用（核心差異）</th><td colspan="7"></td></tr>
+        <tr class="grp"><th>💰 綁約與費用（核心差異）</th><td colspan="5"></td></tr>
         <tr><th>綁約方式</th>
           <td class="me y">完全不綁約·月繳</td><td class="y">月繳不綁約</td><td class="y">月繳不綁約</td>
-          <td class="p">依方案</td><td class="askquote">需洽詢</td><td class="p">免費版＋方案</td><td class="askquote">需洽詢</td></tr>
+          <td class="p">依方案</td><td class="p">免費版＋方案</td></tr>
         <tr><th>定價透明度</th>
           <td class="me y">官網公開固定價</td><td class="y">官網公開</td><td class="y">官網公開</td>
-          <td class="y">官網公開</td><td class="n">不公開·需報價</td><td class="p">部分公開</td><td class="n">不公開·需報價</td></tr>
+          <td class="y">官網公開</td><td class="p">部分公開</td></tr>
         <tr><th>月費（依人數計）</th>
           <td class="me y">$1,800/月<br>(年繳$1,500・3人內)</td>
           <td>$400/人<br>(上限$4,000)</td>
           <td>$950起<br>(5人$1,950)</td>
           <td>$330/人</td>
-          <td class="askquote">需洽詢</td>
-          <td class="p">免費版＋付費</td>
-          <td class="askquote">需洽詢</td></tr>
+          <td class="p">免費版＋付費</td></tr>
         <tr><th>建置費／開通費</th>
           <td class="me y">0 元</td><td class="y">0 元</td><td class="y">0 元</td>
-          <td class="n">開通費 $5,000</td><td class="askquote">需洽詢</td><td class="askquote">需洽詢</td><td class="askquote">需洽詢</td></tr>
+          <td class="n">開通費 $5,000</td><td class="askquote">需洽詢</td></tr>
         <tr><th>綁約押金／保證金</th>
           <td class="me y">0 元</td><td class="y">免押金</td><td class="askquote">需洽詢</td>
-          <td class="askquote">需洽詢</td><td class="askquote">需洽詢</td><td class="askquote">需洽詢</td><td class="askquote">需洽詢</td></tr>
+          <td class="askquote">需洽詢</td><td class="askquote">需洽詢</td></tr>
         <tr><th>簡易客製化費用</th>
           <td class="me y">不另收費</td><td class="p">部分進階另計</td><td class="p">部分加購</td>
-          <td class="n">IG/出單機加值</td><td class="p">加值方案</td><td class="p">金流／進階</td><td class="p">加值另計</td></tr>
+          <td class="n">IG/出單機加值</td><td class="p">金流／進階</td></tr>
 
-        <tr class="grp"><th>⚙️ 核心功能（我們同樣具備）</th><td colspan="7"></td></tr>
+        <tr class="grp"><th>⚙️ 核心功能（我們同樣具備）</th><td colspan="5"></td></tr>
         <tr><th>LINE 官方帳號預約</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
+          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
         <tr><th>24hr 自動接單</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
+          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
         <tr><th>自動提醒（防爽約）</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
+          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
         <tr><th>預約網頁（免加 LINE 也可約）</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
+          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
         <tr><th>多人排班</th>
-          <td class="me y">●</td><td class="p">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="n">○偏一對一</td><td class="y">●</td></tr>
+          <td class="me y">●</td><td class="p">●</td><td class="y">●</td><td class="y">●</td><td class="n">○偏一對一</td></tr>
       </tbody>
       <caption>● 具備／有利　● 部分或需加購　○ 無或較不利｜競品「需洽詢」代表官方未公開定價。依各官網 2026/06 公開資訊整理，實際以官方為準。</caption>
     </table>
@@ -371,7 +378,14 @@
   <div class="wrap">
     <div class="cols">
       <div>
-        <div class="logo" style="font-weight:900;font-size:1.2rem;">美約·美業預約</div>
+        <div class="logo" style="font-weight:900;font-size:1.2rem;">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="8" y="13" width="48" height="43" rx="10" fill="none" stroke="#1fc0ad" stroke-width="5"/>
+            <path d="M8 25 H56" stroke="#1fc0ad" stroke-width="5"/>
+            <path d="M20 7 V17 M44 7 V17" stroke="#1fc0ad" stroke-width="5" stroke-linecap="round"/>
+            <text x="32" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="#1fc0ad" font-family="PingFang TC,Microsoft JhengHei,sans-serif">美</text>
+          </svg>
+          美約 <span class="py">MeiYue</span>·美業預約</div>
         <p style="max-width:320px;">專為台灣美業打造的 LINE 線上預約系統 —— 不綁約、免開通費、簡易客製不另收費。</p>
       </div>
       <div>
