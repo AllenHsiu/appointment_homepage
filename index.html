@@ -144,6 +144,15 @@
   .plan .cap{display:inline-block;background:var(--brand-soft);color:var(--brand-ink);font-size:.82rem;font-weight:700;
     border-radius:999px;padding:3px 12px;margin-bottom:6px;}
   .plan .annual{font-size:.86rem;color:var(--brand-deep);font-weight:700;margin:0 0 8px;}
+  .billing-toggle{display:flex;justify-content:center;gap:4px;margin:0 auto 26px;background:#fff;
+    border:1px solid var(--line);border-radius:999px;padding:5px;width:max-content;box-shadow:0 4px 16px rgba(16,32,29,.06);}
+  .billing-toggle .bt{border:none;background:none;padding:9px 22px;border-radius:999px;font-weight:800;
+    cursor:pointer;color:var(--muted);font-size:.95rem;font-family:inherit;transition:all .15s ease;}
+  .billing-toggle .bt.active{background:var(--brand);color:#fff;}
+  .billing-toggle .bt .save{font-size:.7rem;background:var(--accent);color:#5b3b00;border-radius:999px;padding:1px 7px;margin-left:5px;}
+  #priceWrap .pa{display:none;}
+  #priceWrap[data-bill="annual"] .pm{display:none;}
+  #priceWrap[data-bill="annual"] .pa{display:block;}
   .plan .off{display:inline-block;background:var(--accent);color:#5b3b00;font-size:.78rem;font-weight:900;
     border-radius:999px;padding:2px 10px;vertical-align:middle;margin-left:4px;}
   .plan ul{list-style:none;padding:0;margin:16px 0 22px;text-align:left;font-size:.9rem;color:var(--muted);}
@@ -347,21 +356,27 @@
       <h2>方案簡單、價格公開</h2>
       <p>不用留資料等業務報價 —— <b>看得到的價格，就是你付的全部</b>。依團隊規模兩種方案，年繳再省 2 個月，先免費試用 7 天。</p>
     </div>
-    <div class="price-wrap">
+    <div class="billing-toggle">
+      <button class="bt active" data-bill="monthly">月繳</button>
+      <button class="bt" data-bill="annual">年繳 <span class="save">省 17%</span></button>
+    </div>
+    <div class="price-wrap" id="priceWrap" data-bill="monthly">
       <div class="plan">
         <span class="cap">1～3 位設計師</span>
         <h3>小型工作室</h3>
-        <div class="amt">$599<small>／月</small></div>
-        <div class="annual">年繳 $499/月（$5,990／年・<span class="off">省 17%</span>）</div>
+        <div class="amt pm">$599<small>／月</small></div>
+        <div class="amt pa">$499<small>／月（年繳）</small></div>
+        <div class="annual pa">$5,990／年・省 2 個月</div>
         <ul><li>完全不綁約</li><li>全功能</li><li>免建置費・免開通費</li><li>7 天免費試用</li></ul>
         <a href="#cta" class="btn btn-ghost">開始使用</a>
       </div>
       <div class="plan feature">
         <span class="tag">團隊首選</span>
         <span class="cap">4～10 位設計師</span>
-        <h3>沙龍團隊</h3>
-        <div class="amt">$1,500<small>／月</small></div>
-        <div class="annual">年繳 $1,250/月（$15,000／年・<span class="off">省 17%</span>）</div>
+        <h3>多人團隊</h3>
+        <div class="amt pm">$1,500<small>／月</small></div>
+        <div class="amt pa">$1,250<small>／月（年繳）</small></div>
+        <div class="annual pa">$15,000／年・省 2 個月</div>
         <ul><li>完全不綁約</li><li>全功能</li><li>免建置費・免開通費</li><li>7 天免費試用</li></ul>
         <a href="#cta" class="btn btn-primary">最受歡迎</a>
       </div>
@@ -438,6 +453,16 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.querySelectorAll('.billing-toggle .bt').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.billing-toggle .bt').forEach(function(x){ x.classList.remove('active'); });
+      b.classList.add('active');
+      document.getElementById('priceWrap').setAttribute('data-bill', b.dataset.bill);
+    });
+  });
+</script>
 
 </body>
 </html>
