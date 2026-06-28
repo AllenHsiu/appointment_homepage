@@ -35,11 +35,11 @@
   /* nav */
   nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);}
-  nav .inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .logo{font-weight:900;font-size:1.25rem;color:var(--brand-deep);letter-spacing:.5px;display:inline-flex;align-items:center;gap:8px;}
+  nav .inner{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .logo{font-weight:900;font-size:1.55rem;color:var(--brand-deep);letter-spacing:.5px;display:inline-flex;align-items:center;gap:9px;}
   .logo .logo-mark{flex-shrink:0;}
   .logo span{color:var(--ink);}
-  .logo .py{font-size:.72rem;font-weight:700;color:var(--brand);letter-spacing:1.5px;margin:0 2px 0 4px;text-transform:uppercase;}
+  .logo .py{font-size:.86rem;font-weight:700;color:var(--brand);letter-spacing:1.5px;margin:0 2px 0 5px;text-transform:uppercase;}
   .navlinks{display:flex;gap:26px;font-size:.92rem;font-weight:600;color:var(--muted);}
   .navlinks a:hover{color:var(--brand-deep);}
   .nav-cta{padding:9px 18px;font-size:.9rem;}
@@ -119,6 +119,15 @@
   tbody tr:hover td:not(.me){background:#fafbfa;}
   .y{color:var(--yes);font-weight:700;}.p{color:var(--partial);font-weight:600;}.n{color:var(--no);font-weight:600;}
   td.me.y{color:var(--brand-deep)!important;}
+  .me .star{color:#f0b429!important;margin-right:4px;font-weight:900;}
+  .me-feats{margin-top:26px;background:#fff;border:2px solid var(--brand);border-radius:16px;padding:26px 24px;text-align:center;box-shadow:var(--shadow);}
+  .me-feats h3{margin:0 0 4px;color:var(--brand-deep);font-size:1.25rem;}
+  .me-feats .lead{margin:0 0 18px;color:var(--muted);font-size:.9rem;}
+  .me-feats .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+  .me-feats .pills span{background:var(--brand-soft);color:var(--brand-ink);border:1px solid #bfe9e1;
+    border-radius:999px;padding:9px 16px;font-size:.9rem;font-weight:700;}
+  .me-feats .ln-note{margin:18px auto 0;max-width:680px;font-size:.78rem;color:var(--muted);line-height:1.5;}
+  .me-feats .ln-note a{color:var(--brand-deep);font-weight:700;}
   .askquote{color:var(--gray);font-style:italic;}
   .grp th,.grp td{padding:8px 14px;font-size:.76rem;font-weight:800;color:#475569;letter-spacing:1px;background:#eef2f0;}
 
@@ -165,7 +174,7 @@
 <nav>
   <div class="wrap inner">
     <div class="logo">
-      <svg class="logo-mark" width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+      <svg class="logo-mark" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
         <rect x="8" y="13" width="48" height="43" rx="10" fill="none" stroke="#0f9d8c" stroke-width="5"/>
         <path d="M8 25 H56" stroke="#0f9d8c" stroke-width="5"/>
         <path d="M20 7 V17 M44 7 V17" stroke="#0f9d8c" stroke-width="5" stroke-linecap="round"/>
@@ -178,7 +187,7 @@
       <a href="#pricing">方案</a>
       <a href="#faq">常見問題</a>
     </div>
-    <a href="#cta" class="btn btn-line nav-cta">預約 Demo</a>
+    <a href="#cta" class="btn btn-line nav-cta">免費試用</a>
   </div>
 </nav>
 
@@ -190,10 +199,10 @@
       <h1>價格透明、<b>完全不綁約</b><br>無隱藏費用的<br>LINE 美業預約系統</h1>
       <p class="lead">市面上多數系統「定價不公開、還藏一堆隱藏費用」。我們把成本攤在陽光下 —— 定價公開、免建置費、月繳隨時可停。</p>
       <div class="hero-cta">
-        <a href="#cta" class="btn btn-line">＋ 預約線上 Demo</a>
+        <a href="#cta" class="btn btn-line">＋ 免費試用 14 天</a>
         <a href="#compare" class="btn btn-ghost">看競品比較 →</a>
       </div>
-      <div class="hero-sub">免建置費 · 免綁約 · 簡易客製化不另收費</div>
+      <div class="hero-sub">14 天免費試用 · 免建置費 · 完全不綁約</div>
     </div>
 
     <!-- phone mockup -->
@@ -228,7 +237,7 @@
   <div class="usp">
     <div class="c"><div class="big">0 元</div><div class="lbl">建置費／設定費</div></div>
     <div class="c"><div class="big">免綁約</div><div class="lbl">月繳，隨時可停</div></div>
-    <div class="c"><div class="big">免押金</div><div class="lbl">不收保證金</div></div>
+    <div class="c"><div class="big">14 天</div><div class="lbl">免費試用，滿意再付</div></div>
     <div class="c"><div class="big">免費客製</div><div class="lbl">簡易客製化不另收費</div></div>
   </div>
 </div>
@@ -243,7 +252,7 @@
     </div>
     <div class="feat">
       <div class="f"><div class="ico">💬</div><h3>LINE 一鍵預約</h3><p>顧客在你的 LINE 官方帳號就能看時段、選設計師、完成預約，免下載 App。</p></div>
-      <div class="f"><div class="ico">⏰</div><h3>24hr 自動接單</h3><p>半夜也能接單，預約成功／前一天／取消自動提醒，有效降低爽約。</p></div>
+      <div class="f"><div class="ico">⏰</div><h3>24hr 自動接單</h3><p>半夜也能接單，預約成功／前一天／取消自動提醒，有效降低爽約。<br><small style="color:var(--brand-deep);">※ LINE 推播訊息費用由 LINE 官方收取，非美約收費。</small></p></div>
       <div class="f"><div class="ico">🌐</div><h3>專屬預約網頁</h3><p>除了 LINE，也提供獨立預約網頁，分享連結即可接單，顧客免加好友也能完成預約。</p></div>
       <div class="f"><div class="ico">👥</div><h3>會員與標籤</h3><p>消費紀錄、喜好標籤、儲值與回訪提醒，把熟客牢牢綁住。</p></div>
       <div class="f"><div class="ico">📅</div><h3>多人排班</h3><p>多設計師、多分店行事曆一目了然，排班、休假、預約一眼掌握。</p></div>
@@ -261,63 +270,58 @@
       <p>同樣的功能，<b>不綁約、免開通費</b>，價格更實在。</p>
     </div>
 
-    <div class="legend">
-      <span><i class="ldot y"></i> 對你有利／免費</span>
-      <span><i class="ldot p"></i> 部分／需加購</span>
-      <span><i class="ldot n"></i> 較不利／需付費</span>
-      <span class="askquote">需洽詢 = 官方未公開</span>
-    </div>
-
     <div class="table-scroll">
     <table>
       <thead>
         <tr>
           <th>比較重點</th>
-          <th class="me"><span class="badge">你的系統</span><br>美約 MeiYue</th>
+          <th class="me"><span class="badge">★ 推薦</span><br>美約 MeiYue</th>
           <th>夯客<small>HOTCAKE</small></th>
           <th>客立樂<small>QLiEER</small></th>
           <th>神美<small>SayDou</small></th>
-          <th>樂創約</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="grp"><th>💰 綁約與費用（核心差異）</th><td colspan="5"></td></tr>
+        <tr class="grp"><th>💰 綁約與費用比較</th><td colspan="4"></td></tr>
         <tr><th>綁約方式</th>
-          <td class="me y">完全不綁約·月繳</td><td class="y">月繳不綁約</td><td class="y">月繳不綁約</td>
-          <td class="p">依方案</td><td class="p">免費版＋方案</td></tr>
-        <tr><th>定價透明度</th>
-          <td class="me y">官網公開固定價</td><td class="y">官網公開</td><td class="y">官網公開</td>
-          <td class="y">官網公開</td><td class="p">部分公開</td></tr>
+          <td class="me y"><span class="star">★</span>完全不綁約·月繳</td><td class="y">月繳不綁約</td><td class="y">月繳不綁約</td>
+          <td class="p">依方案</td></tr>
         <tr><th>月費（依人數計）</th>
-          <td class="me y">$1,800/月<br>(年繳$1,500・3人內)</td>
+          <td class="me y"><span class="star">★</span>$1,500/月<br>(年繳$1,300・3人內)</td>
           <td>$400/人<br>(上限$4,000)</td>
           <td>$950起<br>(5人$1,950)</td>
-          <td>$330/人</td>
-          <td class="p">免費版＋付費</td></tr>
+          <td>$330/人</td></tr>
+        <tr><th>14 天免費試用</th>
+          <td class="me y"><span class="star">★</span>14 天・滿意再付</td><td class="y">免費方案</td><td class="askquote">需洽詢</td>
+          <td class="y">票券體驗版</td></tr>
         <tr><th>建置費／開通費</th>
-          <td class="me y">0 元</td><td class="y">0 元</td><td class="y">0 元</td>
-          <td class="n">開通費 $5,000</td><td class="askquote">需洽詢</td></tr>
+          <td class="me y"><span class="star">★</span>0 元</td><td class="y">0 元</td><td class="y">0 元</td>
+          <td class="n">開通費 $5,000</td></tr>
         <tr><th>綁約押金／保證金</th>
-          <td class="me y">0 元</td><td class="y">免押金</td><td class="askquote">需洽詢</td>
-          <td class="askquote">需洽詢</td><td class="askquote">需洽詢</td></tr>
+          <td class="me y"><span class="star">★</span>0 元</td><td class="y">免押金</td><td class="askquote">需洽詢</td>
+          <td class="askquote">需洽詢</td></tr>
         <tr><th>簡易客製化費用</th>
-          <td class="me y">不另收費</td><td class="p">部分進階另計</td><td class="p">部分加購</td>
-          <td class="n">IG/出單機加值</td><td class="p">金流／進階</td></tr>
-
-        <tr class="grp"><th>⚙️ 核心功能（我們同樣具備）</th><td colspan="5"></td></tr>
-        <tr><th>LINE 官方帳號預約</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
-        <tr><th>24hr 自動接單</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
-        <tr><th>自動提醒（防爽約）</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
-        <tr><th>預約網頁（免加 LINE 也可約）</th>
-          <td class="me y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td><td class="y">●</td></tr>
-        <tr><th>多人排班</th>
-          <td class="me y">●</td><td class="p">●</td><td class="y">●</td><td class="y">●</td><td class="n">○偏一對一</td></tr>
+          <td class="me y"><span class="star">★</span>不另收費</td><td class="p">部分進階另計</td><td class="p">部分加購</td>
+          <td class="n">IG/出單機加值</td></tr>
       </tbody>
-      <caption>● 具備／有利　● 部分或需加購　○ 無或較不利｜競品「需洽詢」代表官方未公開定價。依各官網 2026/06 公開資訊整理，實際以官方為準。</caption>
+      <caption>競品「需洽詢」代表官方未公開定價。資料依各官網 2026/06 公開資訊整理，實際以官方為準。</caption>
     </table>
+    </div>
+
+    <div class="me-feats">
+      <h3>美約 — 全功能一次到位</h3>
+      <p class="lead">下列核心功能全部內建，不必加價、不分方案：</p>
+      <div class="pills">
+        <span>✓ LINE 官方帳號預約</span>
+        <span>✓ 24hr 自動接單</span>
+        <span>✓ 自動提醒・防爽約 ※</span>
+        <span>✓ 預約網頁（免加 LINE 也可約）</span>
+        <span>✓ 多人排班</span>
+        <span>✓ 會員管理・標籤</span>
+        <span>✓ 線上訂金・金流</span>
+        <span>✓ 營運報表</span>
+      </div>
+      <p class="ln-note">※ LINE 推播提醒的<b>訊息費用由 LINE 官方收取</b>（官方帳號每月 200 則免費，超量依 LINE 方案計費），非美約收取。實際費率請參考 <a href="https://tw.linebiz.com/faq/oa-price/" target="_blank" rel="noopener">LINE 官方帳號收費說明 ↗</a>。</p>
     </div>
   </div>
 </section>
@@ -328,20 +332,20 @@
     <div class="sec-head">
       <div class="kicker">PRICING</div>
       <h2>方案簡單、價格公開</h2>
-      <p>不用留資料等業務報價 —— 看得到的就是你付的。3 位內設計師同一價。</p>
+      <p>不用留資料等業務報價 —— 看得到的就是你付的。3 位內設計師同一價，先免費試用 14 天。</p>
     </div>
     <div class="price-wrap">
       <div class="plan">
         <h3>月繳</h3>
-        <div class="amt">$1,800<small>／月</small></div>
+        <div class="amt">$1,500<small>／月</small></div>
         <ul><li>3 位內設計師</li><li>完全不綁約</li><li>全功能</li><li>免建置費</li></ul>
         <a href="#cta" class="btn btn-ghost">開始使用</a>
       </div>
       <div class="plan feature">
         <span class="tag">最划算</span>
         <h3>年繳</h3>
-        <div class="amt">$1,500<small>／月（年繳）</small></div>
-        <ul><li>一年省 $3,600（等於 2 個月）</li><li>3 位內設計師</li><li>全功能</li><li>免建置費</li></ul>
+        <div class="amt">$1,300<small>／月（年繳）</small></div>
+        <ul><li>一年省 $2,400</li><li>3 位內設計師</li><li>全功能</li><li>免建置費</li></ul>
         <a href="#cta" class="btn btn-primary">最受歡迎</a>
       </div>
     </div>
@@ -353,7 +357,8 @@
   <div class="wrap">
     <div class="sec-head"><div class="kicker">FAQ</div><h2>常見問題</h2></div>
     <div class="faq">
-      <details open><summary>真的不綁約嗎？</summary><p>是的，採月繳制，隨時可停用，不收違約金、不押保證金。</p></details>
+      <details open><summary>有免費試用嗎？</summary><p>有，提供 <b>14 天免費試用</b>，期間全功能開放，滿意再付費，免綁約、免押金。</p></details>
+      <details><summary>真的不綁約嗎？</summary><p>是的，採月繳制，隨時可停用，不收違約金、不押保證金。</p></details>
       <details><summary>顧客一定要加 LINE 才能預約嗎？</summary><p>不用。除了 LINE 官方帳號，我們也提供專屬預約網頁，把連結貼到 IG、FB 或 Google，顧客免加好友就能直接預約。</p></details>
       <details><summary>有建置費或設定費嗎？</summary><p>沒有。建置費、設定費、押金一律 0 元，開通即用。</p></details>
       <details><summary>需要會寫程式或架站嗎？</summary><p>不用。串接你的 LINE 官方帳號就能開始接單，我們提供專人協助上手。</p></details>
@@ -366,10 +371,10 @@
 <section id="cta">
   <div class="cta">
     <h2>今天就讓顧客在 LINE 上自己預約</h2>
-    <p>免建置費、免綁約、月繳隨時可停。把時間還給你的手藝。</p>
+    <p>14 天免費試用，滿意再付費。免建置費、不綁約，把時間還給你的手藝。</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="#" class="btn btn-primary">＋ 預約線上 Demo</a>
-      <a href="#" class="btn btn-ghost">立即諮詢</a>
+      <a href="#" class="btn btn-primary">＋ 免費試用 14 天</a>
+      <a href="#" class="btn btn-ghost">預約線上 Demo</a>
     </div>
   </div>
 </section>
