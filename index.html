@@ -153,6 +153,9 @@
   #priceWrap .pa{display:none;}
   #priceWrap[data-bill="annual"] .pm{display:none;}
   #priceWrap[data-bill="annual"] .pa{display:block;}
+  #priceWrap .pm,#priceWrap .pa{animation:priceFade .28s ease;}
+  @keyframes priceFade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  @media(prefers-reduced-motion:reduce){#priceWrap .pm,#priceWrap .pa{animation:none;}}
   .plan .off{display:inline-block;background:var(--accent);color:#5b3b00;font-size:.78rem;font-weight:900;
     border-radius:999px;padding:2px 10px;vertical-align:middle;margin-left:4px;}
   .plan ul{list-style:none;padding:0;margin:16px 0 22px;text-align:left;font-size:.9rem;color:var(--muted);}
